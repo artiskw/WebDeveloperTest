@@ -1,0 +1,528 @@
+$large-breakpoint: 1940px;
+$medium-breakpoint: 991px;
+$small-breakpoint: 767px;
+$mini-breakpoint: 575px;
+
+$blue: #4066A5;
+$black: #131821;
+$dark_grey: #6A707B;
+$grey: #E3E3E4;
+$white: #F2F5FA;
+
+
+body {
+  background: #E5E5E5;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.page_content {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+  width: 1920px;
+  height: 1280px;
+
+  .left_side {
+    background: url("../img/image_summer.png"), no-repeat;
+    background-size: cover;
+    width: 100%;
+    width: 1240px;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      background: none;
+      width: auto;
+    }
+  }
+
+  .right_side {
+    width: 680px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #FFFFFF 0%, $white 100%);
+    padding: 120px 0 0 0;
+
+    .header_container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 680px;
+      height: 40px;
+
+      .logo_container {
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+
+          .pineapple {
+            margin: 15px 0 0 15px;
+
+            @media only screen and (max-width: $small-breakpoint) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      nav {
+        display: flex;
+        margin: 17px 0 0 0;
+
+        a {
+          color: $dark_grey;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 0 0 30px;
+
+          &:hover {
+            color: $blue;
+            text-decoration-line: underline;
+          }
+
+          &:focus {
+            color: #233759;
+          }
+
+          @media only screen and (max-width: $small-breakpoint) {
+            margin: 0 0 0 20px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        background: #FFFFFF;
+        ;
+        height: 66px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        width: 375px;
+      }
+    }
+
+    .middle_container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 234px 0 258px 0;
+
+      .submitte {
+        display: none;
+
+        .icon {
+          width: 44px;
+          height: 70px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+
+
+            path {
+              fill: $blue;
+            }
+          }
+        }
+
+        .title {
+          margin: 32px 0 0 0;
+
+          h2 {
+            font-size: 32px;
+            line-height: 44px;
+            font-weight: 400;
+            color: $black;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            color: $dark_grey;
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+
+      .form_container {
+        .title {
+          display: flex;
+          flex-direction: column;
+          text-align: justify;
+
+          h2 {
+            font-size: 32px;
+            line-height: 44px;
+            color: $black;
+            text-align: initial;
+            font-weight: 400;
+
+            @media only screen and (max-width: $medium-breakpoint) {
+              font-size: 24px;
+              line-height: 34px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            color: $dark_grey;
+
+            @media only screen and (max-width: $medium-breakpoint) {
+              font-size: 14px;
+              line-height: 26px;
+              text-align: initial;
+            }
+          }
+        }
+
+        form {
+          margin: 50px 0 0 0;
+
+          .field_email {
+            height: 70px;
+            width: 663px;
+            margin: 0 0 0 -45px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            input {
+              width: 100%;
+              height: 100%;
+              background: #fff;
+              box-sizing: border-box;
+              border: 1px solid $grey;
+              border-left: 4px solid $blue;
+              padding: 20px 50px;
+              transition: .3s;
+
+              &::placeholder {
+                font-size: 16px;
+                line-height: 24px;
+                color: $dark_grey;
+              }
+
+              &:focus {
+                background: #fff;
+              }
+
+              @media only screen and (max-width: $medium-breakpoint) {
+                padding: 0 50px 0 15px;
+              }
+            }
+
+            a {
+              svg {
+                position: absolute;
+                right: 28px;
+                top: 28px;
+                width: 24px;
+                height: 14px;
+                cursor: pointer;
+                margin: 4px 0 0 0;
+                
+                path {
+                  fill: $black;
+                  opacity: 30%;
+                  transition: .3s;
+                }
+
+                @media only screen and (max-width: $medium-breakpoint) {
+                  right: 17px;
+                  top: 21px;
+                }
+              }
+            }
+
+            &:hover {
+              input {
+                border: 1px solid $blue;
+                border-left: 4px solid $blue;
+                box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06)
+              }
+
+              a {
+                svg {
+                  path {
+                    fill: $blue;
+                    opacity: 100%;
+                  }
+                }
+              }
+            }
+
+            &:focus {
+              input {
+                box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+              }
+            }
+
+            @media only screen and (max-width: $medium-breakpoint) {
+              width: 100%;
+              margin: 0 0 0 0;
+              width: 295px;
+              height: 60px;
+            }
+
+            @media only screen and (max-width: $small-breakpoint) {
+              margin: 0 auto;
+            }
+          }
+
+          .email-order {
+            display: flex;
+            margin: 50px 0 0 0;
+
+            .email-container {
+              display: flex;
+              flex-direction: row-reverse;
+              align-items: center;
+
+              p {
+                font-weight: 400;
+                color: $dark_grey;
+                font-size: 16px;
+                line-height: 28px;
+
+                a {
+                  color: #233759;
+                  text-decoration-line: underline;
+
+                  &:hover {
+                    color: $blue;
+                  }
+
+                  &:focus {
+                    color: #233759;
+                  }
+                }
+              }
+            }
+
+            .email-container input {
+              display: none;
+            }
+
+            .mark {
+              background: url(../img/checkbox-empty.png);
+              flex-shrink: 0;
+              margin-right: 8px;
+              height: 26px;
+              width: 26px;
+              cursor: pointer;
+              position: relative;
+            }
+
+            .mark:after {
+              content: "";
+              background: url(../img/checkbox.png);
+              display: none;
+              height: 26px;
+              width: 26px;
+            }
+
+            .email-container input:checked~.mark:after {
+              display: block;
+            }
+
+            @media only screen and (max-width: $small-breakpoint) {
+              margin: 20px 0 0 0;
+            }
+          }
+
+          .notifications {
+            color: $dark_grey;
+            font-size: 16px;
+            margin: 20px 0 0 0;
+          }
+
+          @media only screen and (max-width: $small-breakpoint) {
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+
+      .solid {
+        border: 1px solid $grey;
+        margin: 50px auto;
+
+        @media only screen and (max-width: $small-breakpoint) {
+          margin: 20px 0;
+        }
+      }
+
+      .icon_container {
+        display: flex;
+        justify-content: space-between;
+        width: 244px;
+        margin: 0 auto;
+
+        a {
+          text-decoration: none;
+
+          svg {
+            width: 46px;
+            height: 46px;
+
+            path {
+              stroke: $grey;
+              box-sizing: border-box;
+            }
+
+            path:nth-of-type(2) {
+              stroke-width: 0;
+            }
+          }
+        }
+
+        .facebook:hover {
+          svg {
+            path {
+              fill: #4267B2;
+              box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+              stroke: #4267B2;
+
+              &:active {
+                fill: #2F4A80;
+                box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+                stroke: #2F4A80;
+              }
+            }
+
+            path:nth-of-type(2) {
+              fill: #fff;
+              opacity: inherit;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+
+        .instagram:hover {
+          svg {
+            path {
+              fill: #C13584;
+              box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+              stroke: #C13584;
+
+              &:active {
+                fill: #8F2762;
+                box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+                stroke: #8F2762;
+              }
+            }
+
+            path:nth-of-type(2) {
+              fill: #fff;
+              opacity: inherit;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+
+        .twiter:hover {
+          svg {
+            path {
+              fill: #1DA1F2;
+              box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+              stroke: #1DA1F2;
+
+              &:active {
+                fill: #177FBF;
+                box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+                stroke: #177FBF;
+              }
+            }
+
+            path:nth-of-type(2) {
+              fill: #fff;
+              opacity: inherit;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+
+        .youtube:hover {
+          svg {
+            path {
+              fill: #FF0000;
+              box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+              stroke: #FF0000;
+
+              &:active {
+                fill: #CC0000;
+                box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+                stroke: #CC0000;
+              }
+            }
+
+            path:nth-of-type(2) {
+              fill: #fff;
+              opacity: inherit;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+        
+        @media only screen and (max-width: $small-breakpoint) {
+          width: 214px;
+        }
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+        padding: 30px 20px 30px 20px;
+        width: 335px;
+        margin: 188px auto 187px auto;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        width: 295px;
+        padding: 30px 20px 30px 20px;
+      }
+    }
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      background: url("../img/image_summer.png"), no-repeat;
+      background-size: cover;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      width: 375px;
+    }
+  }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    height: 812px;
+  }
+}
