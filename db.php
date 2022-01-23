@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
 $username = "root";
-$password = "";
+$password = "test12345";
 $dbname = "magebit";
 
 $conn = mysqli_connect($server , $username , $password , $dbname);
