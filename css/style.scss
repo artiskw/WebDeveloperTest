@@ -9,7 +9,6 @@ $dark_grey: #6A707B;
 $grey: #E3E3E4;
 $white: #F2F5FA;
 
-
 body {
   background: #E5E5E5;
   font-family: 'Arial', sans-serif;
@@ -129,7 +128,7 @@ ol {
       padding: 234px 0 258px 0;
 
       .submitte {
-        display: none;
+        //display: none;
 
         .icon {
           width: 44px;
@@ -233,7 +232,9 @@ ol {
               }
             }
 
-            a {
+            button {
+              display: contents;
+
               svg {
                 position: absolute;
                 right: 28px;
@@ -242,7 +243,7 @@ ol {
                 height: 14px;
                 cursor: pointer;
                 margin: 4px 0 0 0;
-                
+
                 path {
                   fill: $black;
                   opacity: 30%;
@@ -263,7 +264,7 @@ ol {
                 box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06)
               }
 
-              a {
+              button {
                 svg {
                   path {
                     fill: $blue;
@@ -488,7 +489,7 @@ ol {
             }
           }
         }
-        
+
         @media only screen and (max-width: $small-breakpoint) {
           width: 214px;
         }
