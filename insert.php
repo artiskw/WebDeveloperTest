@@ -17,8 +17,6 @@ if (isset($_POST['submit'])) {
                 
                 if ($run) {
                     header('Location: index.php?status=success');
-                } else {
-                    // echo "Form not submitted" ;
                 }
             }
         } else {
